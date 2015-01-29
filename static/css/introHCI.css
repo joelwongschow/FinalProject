@@ -64,9 +64,9 @@ html, body {
 .project img.top:hover {
 	opacity:0;
 }
-.project img.bottom{
+.project img.top{
      position:relative;
-     top:400px;
+     bottom:400px;
 }
 
 .jumbotron p.active {
