@@ -9,6 +9,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+/*
 	$("#testjs").click(function(e) {
 		$('.jumbotron h1').text("Javascript is a bo$$");
 		$("#testjs").text("Please wait...");
@@ -20,9 +21,11 @@ function initializePage() {
 	//$("#div-id").click(functionToCall);
 	$("a.thumbnail").click(projectClick);
 	$("#submitBtn").click(updateProject); 
+*/
 }
 
 function updateProject(e) {
+   /*
    var projectID = $('#project').val();
    $(projectID).animate({
       width: $('#width').val()
@@ -30,10 +33,11 @@ function updateProject(e) {
 
    var newText = $('#description').val();
    $(projectID + " .project-description").text(newText);
+   */
 }
 
 function projectClick(e) {
-  // Cancel the default action, which prevents the page from reloading
+ /* // Cancel the default action, which prevents the page from reloading
     e.preventDefault();
 
     // In an event listener, $(this) is the leement that fired the event
@@ -51,4 +55,5 @@ function projectClick(e) {
        $(description).hide();
        //description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
     }
+*/
 }

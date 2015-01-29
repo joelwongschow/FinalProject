@@ -11,9 +11,10 @@
 
 /* this style exists to make it obvious that you've successfully linked
    the CSS to the page. feel free to remove it once the link is working. */
-body {
-     border: 1px dotted gray;
+html, body {
+     order: 1px dotted gray;
      padding: 20px;
+     height:100%;
 }
 
 .jumbotron {
@@ -23,8 +24,12 @@ body {
 
 .jumbotron:after {
      content:"";
-     background: url("../images/lorempixel.jumbotron.jpeg");
-     opacity: 0.2;
+     //background-color: white;
+     background: url("../images/World_map_png_6.jpg");
+     background-size: contain;
+     //background-repeat: no-repeat;
+     //background-position: left top;
+     opacity: 0.3;
      top: 0;
      left: 0;
      bottom: 0;
@@ -39,8 +44,67 @@ body {
 
 .project a {
      text-align: center;
+    }
+
+.project img {
+     //height: 200px;
+     //width 200px;
+     max-height: 400px;
+     max-width: 700px;
+     min-height: 400px;
+     min-width: 700px;
+     position:relative;
+     -webkit-transition: opacity 1s ease-in-out;
+     -moz-transition: opacity 1s ease-in-out;
+     -o-transition: opacity 1s ease-in-out;
+     transition: opacity 1s ease-in-out;
+
+}
+
+.project img.top:hover {
+	opacity:0;
+}
+.project img.bottom{
+     position:relative;
+     top:400px;
 }
 
 .jumbotron p.active {
      color: #1f6ddd;
 }
+/*
+.bottom img {
+     max-height: 200px;
+     max-width: 200px;
+     min-height: 200px;
+     min-width: 200px;
+     position:relative;
+     -webkit-transition: opacity 1s ease-in-out;
+     -moz-transition: opacity 1s ease-in-out;
+     -o-transition: opacity 1s ease-in-out;
+     transition: opacity 1s ease-in-out;
+
+}
+
+.bottom img {
+     max-height: 200px;
+     max-width: 200px;
+     min-height: 200px;
+     min-width: 200px;
+     position:relative;
+     -webkit-transition: opacity 1s ease-in-out;
+     -moz-transition: opacity 1s ease-in-out;
+     -o-transition: opacity 1s ease-in-out;
+     transition: opacity 1s ease-in-out;
+
+}
+
+
+.top img.top:hover {
+	opacity:0;
+}
+
+.bottm img.top:hover {
+	opacity:0;
+}
+*/
