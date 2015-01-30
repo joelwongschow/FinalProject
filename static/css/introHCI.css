@@ -11,15 +11,22 @@
 
 /* this style exists to make it obvious that you've successfully linked
    the CSS to the page. feel free to remove it once the link is working. */
-html, body {
+body {
      order: 1px dotted gray;
      padding: 20px;
-     height:100%;
+     //height:100%;
+     background-color: #CCFFE6;
+}
+
+html{
+    //background-color: #9b9393;
 }
 
 .jumbotron {
 	position: relative;
 	background: none;
+
+     color:white;
 }
 
 .jumbotron:after {
@@ -29,7 +36,7 @@ html, body {
      background-size: contain;
      //background-repeat: no-repeat;
      //background-position: left top;
-     opacity: 0.3;
+     opacity: 1.5;
      top: 0;
      left: 0;
      bottom: 0;
@@ -39,7 +46,13 @@ html, body {
 }
 
 .jumbotron p {
-     color: #6e6e6e;
+     //color: #6e6e6e;
+
+     color:white;
+}
+
+.container {
+
 }
 
 .project a {
@@ -58,16 +71,17 @@ html, body {
      -moz-transition: opacity 1s ease-in-out;
      -o-transition: opacity 1s ease-in-out;
      transition: opacity 1s ease-in-out;
-
+     opacity:.85;
 }
 
-.project img.top:hover {
-	opacity:0;
+.project img.bottom:hover {
+	opacity:1;
 }
 .project img.top{
      position:relative;
      bottom:400px;
 }
+
 
 .jumbotron p.active {
      color: #1f6ddd;
