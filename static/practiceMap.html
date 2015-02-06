@@ -40,9 +40,10 @@
 
         function onLocationFound(e) {
 			var radius = e.accuracy / 2;
+			var txt = "Post Story Here!"
 
 			L.marker(e.latlng).addTo(map)
-				.bindPopup("Post a story here?").openPopup();
+				.bindPopup("<p>" + txt.link("index.html") + "</p>").openPopup();
 
 			L.circle(e.latlng, radius).addTo(map);
 		}
