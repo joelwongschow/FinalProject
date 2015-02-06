@@ -59,9 +59,10 @@
 		var popup = L.popup();
 
 		function onMapClick(e) {
+		var txt = "View Stories";
 			popup
 				.setLatLng(e.latlng)
-				.setContent("View stories")
+				.setContent("<p>" + txt.link("index.html") + "</p>")
 				.openOn(map);
 		}
 
