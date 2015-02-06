@@ -43,7 +43,7 @@
 			var txt = "Post Story Here!"
 
 			L.marker(e.latlng).addTo(map)
-				.bindPopup("<p>" + txt.link("index.html") + "</p>").openPopup();
+				.bindPopup("<p>" + txt.link("storiesForum.html") + "</p>").openPopup();
 
 			L.circle(e.latlng, radius).addTo(map);
 		}
@@ -61,9 +61,10 @@
 
 		function onMapClick(e) {
 		var txt = "Post a Story Here!";
+		var txt1 = "View Stories from Here";
 			popup
 				.setLatLng(e.latlng)
-				.setContent("<p>" + txt.link("storiesForum.html") + "</p>")
+				.setContent("<p>" + txt.link("storiesForum.html") + "   or   "  + txt1.link("viewStories.html")  +  "</p>")
 				.openOn(map);
 		}
 
