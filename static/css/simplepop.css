@@ -376,7 +376,12 @@ header {
 
 
 /*==Features==*/
-.sec-features {min-height: 608px;}
+.sec-features {
+min-height: 0px;
+margin-left: auto;
+margin-right: auto;
+
+}
 @media screen and (max-width: 30em) {
   .col-3:first-child .features-post {margin-top: 5em;}
 }
@@ -386,7 +391,10 @@ header {
 .features-post img {
   
   display: block;
-  margin: 3em auto;
+  //margin: 3em auto;
+  //margin-left: auto;
+  //margin-right: auto;
+
   height: 100%;
   width: 100%;
   //@media screen and (max-width: 768px) {margin: 1.5em 0;}
