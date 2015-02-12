@@ -9,9 +9,6 @@
 	<link rel="stylesheet" href="leaflet-0.7.3/leaflet.css" />
 
     <script src="leaflet-0.7.3/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/introHCI.js"></script>
 
 	<style>
 	body{
@@ -26,7 +23,6 @@
 </head>
 <body>
 	<div id="map"></div>
-	<div id="popup"></div>
 
 	<script>
 
@@ -43,10 +39,9 @@
 
         function onLocationFound(e) {
 			var radius = e.accuracy / 2;
-			var txt = "Post Story Here!"
-
+			var txt = "<div class='form-group'><label for='description'>Your Story:</label><textarea type='text' class='form-control' id='description' rows='8' cols='38' placeholder='Write your story here...' align='center'></textarea></div><div><input type='button' value='Publish Your Story' onclick='window.location.href='index.html'><input type='button' value='View Other Stories' onclick='window.location.href='viewStories.html''></div></form>";
 			L.marker(e.latlng).addTo(map)
-				.bindPopup("<p>" + txt.link("storiesForum.html") + "</p>").openPopup();
+				.bindPopup(txt).openPopup();
 
 
 			L.circle(e.latlng, radius).addTo(map);
@@ -66,24 +61,19 @@
 		function onMapClick(e) {
 		var txt = "Post a Story Here!";
 		var txt1 = "View Stories from Here";
-		var txt2 = "<div class='form-group'><label for='description'>Your Story:</label><textarea type='text' class='form-control' id='description' rows='8' cols='38' placeholder='Write your story here...' align='center'></textarea></div><div><input type='button' value='Publish Your Story' onclick='window.location.href='index.html''><input type='button' value='View Other Stories' onclick='window.location.href='viewStories.html''></div></form>";
+		var txt2 = "<div class='form-group'><label for='description'>Your Story:</label><textarea type='text' class='form-control' id='description' rows='8' cols='38' placeholder='Write your story here...' align='center'></textarea></div><div><input type='button' value='Publish Your Story' onclick='window.location.href='index.html'><input type='button' value='View Other Stories' onclick='window.location.href='viewStories.html''></div></form>";
 			popup
 				.setLatLng(e.latlng)
 				.setContent(txt2)
 				.openOn(map);
 		}
 
-		/*function onPopUpClick(e){
-			e.preventDefault();
-			var txt = 
+		function quickfun() {
 
-		}*/
+		}
+
 
 		map.on('click', onMapClick);
-
-		/*popup.on('click', onPopUpClick)*/
-
-
 
 
 		/*var myIcon = L.icon({
@@ -101,5 +91,9 @@
 		L.marker([])
 
 	</script>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/introHCI.js"></script>
 </body>
 </html>
