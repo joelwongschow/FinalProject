@@ -10,6 +10,9 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var add = require('./routes/add');
+var storiesForum = require('./routes/storiesForum');
+var practiceMap = require('./routes/practiceMap');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -38,6 +41,8 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/add', add.addStory);
+app.get('/practiceMap.handlebars', practiceMap.view);
+app.get('/storiesForum.handlebars', storiesForum.view);
 // Example route
 // app.get('/users', user.list);
 

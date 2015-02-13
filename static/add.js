@@ -1,4 +1,4 @@
-var data = require("../storyData.json");
+var data = require("./storyData.json");
 
 exports.addStory = function(req, res) {
 	console.log(data);
