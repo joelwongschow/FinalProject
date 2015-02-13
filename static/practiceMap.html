@@ -10,6 +10,10 @@
 
     <script src="leaflet-0.7.3/leaflet.js"></script>
 
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/introHCI.js"></script>
+
 	<style>
 	body{
 	  padding: 0;
@@ -39,7 +43,7 @@
 
         function onLocationFound(e) {
 			var radius = e.accuracy / 2;
-			var txt = "<div class='form-group'><label for='description'>Your Story:</label><textarea type='text' class='form-control' id='description' rows='8' cols='38' placeholder='Write your story here...' align='center'></textarea></div><div><input type='button' value='Publish Your Story' onclick='window.location.href='index.html'><input type='button' value='View Other Stories' onclick='window.location.href='viewStories.html''></div></form>";
+			var txt = "<form id='projectForm' role=form'><div class='form-group'><label for='description'>Your Story:</label><textarea type='text' class='form-control' id='description' rows='8' cols='20' placeholder='Write your story here...' align='center'></textarea></div><div><input type='button' onclick='myFunction()' value='Post Story'><input type='button' value='View Other Stories' onclick='otherFunction()'></div></form>";
 			L.marker(e.latlng).addTo(map)
 				.bindPopup(txt).openPopup();
 
@@ -61,39 +65,29 @@
 		function onMapClick(e) {
 		var txt = "Post a Story Here!";
 		var txt1 = "View Stories from Here";
-		var txt2 = "<div class='form-group'><label for='description'>Your Story:</label><textarea type='text' class='form-control' id='description' rows='8' cols='38' placeholder='Write your story here...' align='center'></textarea></div><div><input type='button' value='Publish Your Story' onclick='window.location.href='index.html'><input type='button' value='View Other Stories' onclick='window.location.href='viewStories.html''></div></form>";
+		var txt2 = "<form id='projectForm' role=form'><div class='form-group'><label for='description'>Your Story:</label><textarea type='text' class='form-control' id='description' rows='8' cols='20' placeholder='Write your story here...' align='center'></textarea></div><div><input type='button' onclick='myFunction()' value='Post Story'><input type='button' value='View Other Stories' onclick='otherFuntion()'></div></form>";
 			popup
 				.setLatLng(e.latlng)
 				.setContent(txt2)
 				.openOn(map);
 		}
 
-		function quickfun() {
-
-		}
 
 
 		map.on('click', onMapClick);
-
-
-		/*var myIcon = L.icon({
-            iconUrl: 'leaflet-0.7.3/images/Designcontest-Outline-Ink-Pen.ico',
-            iconSize: [38, 95],
-            iconAnchor: [22, 94],
-            popupAnchor: [-3, -76],
-        });
-
-
-        L.marker([32.6781, -117.1725], {icon: myIcon}).addTo(map).bindPopup("Favorite Spot");*/
-
-
-
-		L.marker([])
-
+	
 	</script>
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/introHCI.js"></script>
+	<script>
+	function myFunction(){
+		console.log("GOT HERE");
+		window.location.assign("storiesForum.html");
+	}
+
+	function otherFunction(){
+		console.log("GOT HERE");
+		window.location.assign("storiesForum.html");
+	}
+	</script>
 </body>
 </html>
